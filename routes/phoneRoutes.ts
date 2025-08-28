@@ -1,10 +1,12 @@
 import { Router } from "express";
-import { getPhoneNumber, getExecutionLog } from "../controllers/phoneController.ts";
+import { getPhoneNumber, getPhoneNumberNonBlocking, getExecutionLog, getTranscriptByPhoneNumber } from "../controllers/phoneController.ts";
 
 const phoneRouter = Router();
 
 phoneRouter.post("/number", getPhoneNumber);
-phoneRouter.get("/executions/:executionId/log", getExecutionLog);
+phoneRouter.post("/number-nonblocking", getPhoneNumberNonBlocking);
+phoneRouter.get("/executions/:executionId", getExecutionLog);
+phoneRouter.get("/transcript/:phoneNumber", getTranscriptByPhoneNumber);
 
 export default phoneRouter;
 
