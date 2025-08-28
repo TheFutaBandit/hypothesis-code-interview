@@ -2,6 +2,8 @@
 
 A Node.js/Express backend that integrates with Bolna AI to make phone calls and automatically save transcripts to a PostgreSQL database.
 
+Please run "bun test-transcript-fix.mjs" to get the output of the flow, the output has been pasted below"
+
 ## What It Does
 
 1. **Makes phone calls** via Bolna AI API
